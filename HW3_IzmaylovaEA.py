@@ -65,6 +65,7 @@ class Kmer_spectrum:
             s += x_line[index]*y_line[index]
         size = s/x_line[pos_max]
         print('Genome size is', size, 'bp')
+# Проверка на файле test_kmer1.fastq
 my_file = Kmer_spectrum('/home/izmaylova/Downloads/test_kmer1.fastq')
 frequency = my_file.kmer_freq(my_file.kmers(15, 30))
 inp = my_file.visualize_spectrum(frequency)
@@ -74,8 +75,6 @@ pos_min = inp[2]
 pos_max = inp[3]
 my_file.genome_size(x_line, y_line, pos_min, pos_max)
 
-
-# In[ ]:
 
 
 
