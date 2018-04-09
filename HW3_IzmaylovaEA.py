@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[ ]:
+# In[1]:
 
 from Bio import SeqIO
 from collections import defaultdict
@@ -65,7 +65,6 @@ class Kmer_spectrum:
             s += x_line[index]*y_line[index]
         size = s/x_line[pos_max]
         print('Genome size is', size, 'bp')
-# Тестирование на файле test_kmer1.fastq.
 my_file = Kmer_spectrum('/home/izmaylova/Downloads/test_kmer1.fastq')
 frequency = my_file.kmer_freq(my_file.kmers(15, 30))
 inp = my_file.visualize_spectrum(frequency)
